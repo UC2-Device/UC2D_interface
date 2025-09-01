@@ -1,0 +1,29 @@
+import { Routes, Route } from "react-router-dom";
+import PrivateRoute from "./privateRoute";
+import Login from "../Pages/login";
+import Signup from "../Pages/signup";
+import VerifyEmail from "../Pages/verifyEmail";
+import ForgotPassword from "../Pages/forgotPassword";
+import Home from "../Pages/home";
+
+export default function FinalRoutes() {
+  return (
+    <Routes>
+      {/* Public routes */}
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/verify-email" element={<VerifyEmail />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
+
+      {/* Private routes */}
+      <Route
+        path="/"
+        element={
+          <PrivateRoute>
+            <Home />
+          </PrivateRoute>
+        }
+      />
+    </Routes>
+  );
+}
