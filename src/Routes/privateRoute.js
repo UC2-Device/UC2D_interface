@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Navigate } from "react-router-dom";
 import { AuthContext } from "../Authentication_API/Authentication";
+import Navbar from "../Component/Navbar";
 
 export default function PrivateRoute({ children }) {
   const { user, loading } = useContext(AuthContext);
@@ -13,5 +14,10 @@ export default function PrivateRoute({ children }) {
     return <Navigate to="/login" replace />;
   }
 
-  return children;
+  return (
+    <div>
+        <Navbar />
+        {children}
+    </div>
+  );
 }

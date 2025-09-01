@@ -69,7 +69,7 @@ const AuthService = {
     const res = await fetch(`${API_URL}/authenticate_user`, {
       headers: { Authorization: `Bearer ${token}` },
     });
-
+    
     if (!res.ok) throw new Error("Not authenticated");
     return res.json();
   },

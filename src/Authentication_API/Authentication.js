@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState , useContext} from "react";
 import { useNavigate } from "react-router-dom";
 
 import AuthService from "./authenticationFunction";
@@ -14,7 +14,7 @@ export function AuthProvider({ children }) {
         const check = async () => {
             try {
                 const data = await AuthService.checkAuth();
-                setUser(data);
+                setUser(data.user);
             } catch {
                 setUser(null);
             } finally {
@@ -47,3 +47,5 @@ export function AuthProvider({ children }) {
         </AuthContext.Provider>
     );
 }
+
+export const useAuth = () => useContext(AuthContext);
