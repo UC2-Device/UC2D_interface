@@ -5,6 +5,7 @@ import Signup from "../Pages/signup";
 import VerifyEmail from "../Pages/verifyEmail";
 import ForgotPassword from "../Pages/forgotPassword";
 import Home from "../Pages/home";
+import Dashboard from "../Pages/Dashboard";
 
 export default function FinalRoutes() {
   return (
@@ -21,6 +22,15 @@ export default function FinalRoutes() {
         element={
           <PrivateRoute>
             <Home />
+          </PrivateRoute>
+        }
+      />
+
+      <Route
+        path="/dashboard"
+        element={
+          <PrivateRoute>
+            <Dashboard />
           </PrivateRoute>
         }
       />
