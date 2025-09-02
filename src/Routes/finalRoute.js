@@ -6,6 +6,7 @@ import VerifyEmail from "../Pages/verifyEmail";
 import ForgotPassword from "../Pages/forgotPassword";
 import Home from "../Pages/home";
 import Dashboard from "../Pages/Dashboard";
+import Buypack from "../Pages/Buypack.js";
 
 export default function FinalRoutes() {
   return (
@@ -15,7 +16,6 @@ export default function FinalRoutes() {
       <Route path="/signup" element={<Signup />} />
       <Route path="/verify-email" element={<VerifyEmail />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
-
       {/* Private routes */}
       <Route
         path="/"
@@ -34,6 +34,10 @@ export default function FinalRoutes() {
           </PrivateRoute>
         }
       />
+
+      <Route path="/purchase/session" element={<PrivateRoute><Buypack paymentfor="sessionupgrade"/></PrivateRoute>} />
+      <Route path="/purchase/prenium" element={<PrivateRoute><Buypack paymentfor="planupgrade"/></PrivateRoute>} />
+      <Route path="/purchase/plan" element={<PrivateRoute><Buypack paymentfor="purchaseplan"/></PrivateRoute>} />
     </Routes>
   );
 }
