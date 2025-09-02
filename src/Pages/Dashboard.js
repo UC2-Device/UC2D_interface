@@ -98,7 +98,7 @@ export default function Dashboard() {
                             name="Area"
                         />
                         <div className="relative">
-                            {user?.plan === "premium" ? (
+                            {user?.plan === "prenium" ? (
                                 <ChartCard
                                     title="Health"
                                     data={stats}
