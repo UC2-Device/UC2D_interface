@@ -1,1 +1,2 @@
-export const URL = "http://127.0.0.1:4000";
+export const URL = process.env.REACT_APP_URL; 
+console.log(process.env.REACT_APP_URL)
