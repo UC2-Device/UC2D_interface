@@ -13,7 +13,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo and Branding */}
           <div className="flex-shrink-0">
-            <Link to="/dashboard" className="flex items-center space-x-2">
+            <Link to="/" className="flex items-center space-x-2">
               <span className="text-2xl">🌱</span>
               <span className="text-xl font-bold text-green-800">UC²D</span>
             </Link>

@@ -91,31 +91,31 @@ export default function Dashboard() {
                             />
                         </div>
                         <ChartCard
-                            title="Area Utilised (Acres)"
+                            title="Health"
                             data={stats}
-                            dataKey="area_utilised"
-                            lineColor="#22c55e"
-                            name="Area"
+                            dataKey="health_need"
+                            lineColor="#f59e0b"
+                            name="Needs"
                         />
                         <div className="relative">
                             {user?.plan === "prenium" ? (
                                 <ChartCard
-                                    title="Health"
+                                    title="Area Utilised (Acres)"
                                     data={stats}
-                                    dataKey="health_need"
-                                    lineColor="#f59e0b"
-                                    name="Needs"
+                                    dataKey="area_utilised"
+                                    lineColor="#22c55e"
+                                    name="Area"
                                 />
                             ) : (
                                 <div className="relative">
                                     {/* Blurred Graph */}
                                     <div className="blur-sm pointer-events-none select-none">
                                         <ChartCard
-                                            title="Health"
+                                            title="Area Utilised (Acres)"
                                             data={stats}
-                                            dataKey="health_need"
-                                            lineColor="#f59e0b"
-                                            name="Needs"
+                                            dataKey="area_utilised"
+                                            lineColor="#22c55e"
+                                            name="Area"
                                         />
                                     </div>
 
