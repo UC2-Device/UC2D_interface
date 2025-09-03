@@ -64,7 +64,7 @@ export default function Home() {
                                 <UsageBar used={user.used_sessions} total={user.total_sessions} />
                                 <div className="mt-4 text-center">
                                     <Link
-                                        to="/buy-sessions" // Replace with your actual route
+                                        to="/purchase/session" // Replace with your actual route
                                         className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white text-sm font-medium rounded-lg shadow hover:from-blue-600 hover:to-blue-700 transition"
                                     >
                                         <ShoppingCartIcon className="h-5 w-5 mr-2" />
@@ -89,7 +89,7 @@ export default function Home() {
                                     <span className="font-medium">Current Plan</span>
                                     {user.plan === "normal" ? (
                                         <Link
-                                            to="/premium"
+                                            to="/purchase/prenium"
                                             className="px-4 py-2 bg-gradient-to-r from-green-500 to-green-600 text-white text-sm font-medium rounded-lg shadow hover:from-green-600 hover:to-green-700 transition"
                                         >
                                             Upgrade to Premium
@@ -112,7 +112,7 @@ export default function Home() {
                                 {daysRemaining === 0 && (
                                     <div className="text-center mt-4">
                                         <Link
-                                            to="/buy-sessions" // Your renew/buy page
+                                            to="/purchase/plan" // Your renew/buy page
                                             className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-red-500 to-red-600 text-white text-sm font-medium rounded-lg shadow hover:from-red-600 hover:to-red-700 transition"
                                         >
                                             <ShoppingCartIcon className="h-5 w-5 mr-2" />

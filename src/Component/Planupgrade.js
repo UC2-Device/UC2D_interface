@@ -2,8 +2,8 @@ import { useState } from 'react';
 import PaymentRedirect from './Payment.js'; // Assuming PaymentRedirect is in the same directory
 
 const sessionPricing = {
-    normal: 50, // Price per normal session
-    prenium: 100, // Price per premium session
+    normal: 100, // Price per normal session
+    prenium: 1000, // Price per premium session
 };
 
 export default function PlanPurchase() {
@@ -33,7 +33,7 @@ export default function PlanPurchase() {
 
     // If the user has clicked "Proceed", show the PaymentRedirect component
     if (proceedToPayment) {
-        return <PaymentRedirect type="planUpgrade" amount={amount} isprenium={selectedPlan} />;
+        return <PaymentRedirect type="planPurchase" amount={sessions} isprenium={selectedPlan} />;
     }
 
     // Otherwise, show the session selection UI

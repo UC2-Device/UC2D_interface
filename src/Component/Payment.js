@@ -36,7 +36,7 @@ export default function PaymentButton({ type , amount , isprenium}) {
             // Dynamically set the backend endpoint based on the payment type
             const res = await axios.post(
                 `${URL}${details.apiEndpoint}`,
-                { amount }, // Sending amount in the request body
+                { amount , isprenium}, // Sending amount in the request body
                 {
                     headers: { Authorization: `Bearer ${token}` },
                 }
